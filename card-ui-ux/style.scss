@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  background:#D3D0CB;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+article{
+  position:relative;
+  margin:25px;
+  width:450px;
+  box-shadow: 0 0 15px rgba(#393E41,0.7);
+  border-radius:15px;
+  font-family: Lato, sans-serif;
+  
+  img{
+    width:450px;
+    height:200px;
+    object-fit:cover;
+    border-radius:5px 5px 0 0;
+  }
+  figcaption{
+    background:#fff;
+    padding:15px;
+    
+    > span{
+      display:inline-block;
+      width:45%;
+      margin:0;
+      padding:0;
+      line-height:1.7rem;
+        
+      &:nth-child(odd){
+        font-weight:900;
+      }
+    }
+  }
+  &:after{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:800;
+    font-size:1rem;
+    position:absolute;
+    z-index:2;
+    top:-5px;
+    right:-5px;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    color:#fff;
+    font-family:"Font Awesome 5 Free";
+  }
+  &[data-content="false"]::after{
+    content:"\f00d";
+    background:#960200;
+  }
+  &[data-content="true"]::after{
+    content:"\f00c";
+    background:#44BBA4;
+  }
+  
+  &[data-content="true"]{
+
+    figcaption{
+      position:relative;
+      padding:0;
+      border-radius:0 0 10px 10px;
+      .info{
+        padding:15px
+      }
+      .tag{
+        position:absolute;
+        top:-20px;
+        background:linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+        color:#fff;
+        width:auto;
+        padding:5px 15px;
+        border-radius:5px;
+    }
+    h2.name{
+      font-size:2rem;
+      font-weight:500;
+      line-height:2.8rem
+    }
+    .country{
+      display:block;
+      color:#A2AEBB;
+      width:100%;
+      font-size:0.9rem;
+      letter-spacing:0.8px;
+      font-weight:300
+    }
+      
+      .flex{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        padding:0 15px 15px 15px;
+        
+        div{
+          width:50%;
+          display:inline-flex;
+          align-items: center;
+          margin:10px 0;
+          
+          svg{
+            height:1.6rem;
+            width:1.6rem;
+            margin-right:20px;
+            fill:#E31C5F;
+          }
+          
+          .bold{
+            font-weight:800;
+            padding-right:5px;
+          }
+
+          &.box-price{
+            .price{
+              font-size:2rem;
+              line-height:1rem;
+              font-weight:800;
+            }
+            .label{
+              font-size:1rem;
+              text-transform:uppercase
+            }
+          }
+        }
+      }
+    
+    .card__footer{
+    border-top:1px solid #DFE0E2;
+    background:#DFE0E2;
+    background:linear-gradient(to bottom, #f5f6f7 0%, #DFE0E2 50%, rgba(#c7c8cb,0.4) 100%)
+    display:flex;
+      padding:0 15px;
+      border-radius:0 0 10px 10px;
+    img{
+      width:65px;
+      height:65px;
+      object-fit:cover;
+      border-radius:50%;
+      margin:10px 0;
+    }
+      
+      .text{
+          padding:10px;
+        }
+      
+      span{
+        display:block;
+        line-height:1.3rem;
+        
+        &.label{
+          text-transform:uppercase;
+          font-size:0.7rem;
+          font-weight:600;
+          color:#868c93
+        }
+        &.name{
+           font-size:1.2rem;
+          font-weight:700;
+        }
+        &.contact{
+          font-size:0.9rem;
+          font-weight:600;
+          color:#868c93
+        }
+      }
+  }
+    }
+    
+  }
+}
+
